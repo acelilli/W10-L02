@@ -11,6 +11,7 @@ const AddComment = ({ asin }) => {
   });
 
   // Hook useEffect per AGGIORNARE l'elementId quando cambia la prop asin
+  // use effect cambia solo se cambia la prop quindi non serve l'if
   useEffect(() => {
     setComment((prevComment) => ({
       ...prevComment,
@@ -61,6 +62,7 @@ const AddComment = ({ asin }) => {
             // Aggiornamento dello stato quando il valore cambia
             onChange={(e) => setComment({ ...comment, comment: e.target.value })}
           />
+          {/* se lasciassi comment:{} gli passerei un'oggetto, tuttavia ora NON vuole un oggetto. Inoltre, con lo stato fa il confronto, mentre così sostituisce direttamente !!! */}
         </Form.Group>
         <Form.Group className="mb-2">
           <Form.Label>Valutazione</Form.Label>

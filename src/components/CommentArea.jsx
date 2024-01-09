@@ -4,6 +4,8 @@ import AddComment from "./AddComment";
 import Loading from "./Loading";
 import Error from "./Error";
 
+// ricordati di mettere le props da class a funzione!!!!!
+// avrei potuto scrivere direttamente {asin} al posto di props (poi avrei dovuto scrivere direttamente asin) ma NB! dovevano rimanere le {} !
 const CommentArea = (props) => {
   // state = {
   //   comments: [],
@@ -40,6 +42,7 @@ const CommentArea = (props) => {
   const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
+  // setto gli stati che uso dopo uno alla volta, richiamandoli come se fossero funzioni
 
   useEffect(() => {
     const fetchData = async () => {

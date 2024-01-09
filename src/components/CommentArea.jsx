@@ -72,7 +72,7 @@ const CommentArea = (props) => {
     };
 
     fetchData();
-  }, [props.asin]);
+  }, [props.asin]); // così controlla quando cambia asin
 
   // componentDidUpdate = async (prevProps) => {
   //   if (prevProps.asin !== this.props.asin) {

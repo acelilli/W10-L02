@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
 
-// Destructuring delle props come params
+// Destructuring delle props(asin) e le uso come params
 const AddComment = ({ asin }) => {
   // Hook useState per definire lo stato iniziale
   const [comment, setComment] = useState({
